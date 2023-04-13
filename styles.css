@@ -1,0 +1,57 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+body{
+    background-color:#54a724
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /*Es el total de la pantalla*/
+}
+.Calculadora{
+    display: grid; /*Se utiliza para crear una cuadricula con filas y columnas*/
+    grid-template-columns: repeat(4,65px); /* 4 columnad de 65 px de ancho*/
+    grid-template-rows: 100px repeat(5,65px); /*5 filas de 65px de altura 80px es la altura de la pantalla*/
+    background-color: rgb(70, 231, 231);
+    padding: 20px; /*Para que los botones no esten tan pegados a los bordes*/
+    border-radius: 20px;
+    border-style: inset;
+}
+button{
+    cursor:pointer;/*Patra que salga una manita*/
+    margin: 4px; /*Separacion y tamaño de los botones*/
+    font-size: xx-large; /*Tamaño de letra*/
+    border: none;
+    border-radius: 10px; 
+    border-style:groove;
+    background-color:rgb(70, 231, 231)
+   }
+button:active{
+    background-color: rgb(73, 201, 201); /*Los button cambian de color cuando se da click sobre ellos*/
+   }
+.Pantalla{
+    grid-column: 1/-1; /*Especifica el tamaño de una celda y ubicación en una columna*/
+    background-color: black;
+    padding: 10px; /*Separar los numeros de los bordes de la pantalla*/
+    margin: 0 10px 10px; 
+    border-radius: 10px;
+    text-align: right;
+    justify-content:space-between; /*Esten separados los numeros*/
+    display: flex;
+    flex-direction:column; /*Para que los numeros esten uno arriba de otro*/
+    border-style: groove;
+    font-size:x-large;
+}
+.Tecla_Grande{
+    grid-column:span 2; /*Hacer una columna con 2 celdas */
+}
+.Operacion{
+    font-size: x-large;
+}
+
+.Resultado{
+    font-size:large;
+} 
